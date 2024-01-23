@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header>
+
+    <h1>DOM : Introduccion y Detalles Basicos</h1>
+
+        <!-- - Objeto documento(DOM) (document)
+    - Obtener Elementos o Elementos(getElementById,querySelector,querySelectorAll)
+    - Nodos( que cosa son los nodos )
+    - TextContent (contenido elemento)
+    - Estilos
+    - DomTraversing
+    - createElement
+    - innerHTML -->
+    <nav>
+        <ul class="NavBar">
+            <li><a class="link" href="#">Inicio</a></li>
+            <li><a href="#">Obtener Elementos</a></li>
+            <li><a href="#">Nodos</a></li>
+            <li><a href="#">TextContent</a></li>
+            <li><a href="#">Estilos</a></li>
+            <li><a href="#">DomTraversing</a></li>
+            <li><a href="#">createElement</a></li>
+            <li><a href="#">innerHTML</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+    <div id="contenedor"></div>
+
+
+<main>
+
+    <section class="sections">
+        <h2 class="sectionTitle">Inicio</h2>
+
+        <p class="sectionText">DOM conecta la pagina web a la programación a traves de la representación estructural del documento. Divide el HTML en selectores, classes, id, texto, entre otros.</p>
+
+    </section>
+
+    <section class="sections">
+
+        <h2 class="sectionTitle">Obtener Elementos</h2>
+
+        <ol>
+            <li> Get element by id</li>
+                <p class="sectionExample">const message = document.getElementById('message');</p>
+            <li> QuearySelector</li>
+                <p class="sectionExample">const message2 = document.querySelector('.parrafo');</p>
+            <li> QuearySelectorAll</li>
+                <p class="sectionExample">const message2 = document.querySelectorAll('NavBar li a');</p>
+        </ol>
+        
+
+    </section>
+
+    <section class="sections">
+        <h2 class="sectionTitle">Nodos</h2>
+
+        <p class="sectionText">Todo elemento HTML es un nodo, pero no todo nodo es un elemento HTML</p>
+
+        <ul>
+            <li> Nodo de elemento (p o a los selectores)</li>
+
+            <li> Nodo de atributo (clase o id)</li>
+
+            <li> Nodo de Texto (contenido)</li>
+
+        </ul>
+
+    </section>
+    <section class="sections">
+        <h2 class="sectionTitle">TextConent</h2>
+
+        <p class="sectionText">El textContent permite ver que texto tiene el elemento, a la vez se puede utilizar para cambiarlo o aplicarlo a un elemento nuevo.</p>
+
+        <p class="sectionExample"> message.textContent = 'Soy un mensaje cambiado desde Javascript';</p>
+        
+
+    </section>
+    <section class="sections">
+        <h2 class="sectionTitle">Estilos</h2>
+
+        <p class="sectionText">Se pueden aplicar estilos de CSS dentro de JavaScript, para esto es necesario el tratar con un elemento individual o transformar una lista de nodos en items individuales</p>
+
+        <p class="sectionExample"> const message = document.getElementById('message'); message.style.color = 'red';</p>
+
+        <p class="sectionExample"> const linkarray = Array.from(document.querySelectorAll('.NavBar li a'));
+        </p>
+
+        <p class="sectionExample">
+            for (i=0;i>=linkarray.length-1;i++) {
+            linkarray[i].style.color = 'red';
+            }
+        </p>
+
+    </section>
+    <section class="sections">
+        <h2 class="sectionTitle">DomTraversing</h2>
+
+        <p class="sectionText">Usando Javascript se puede viajar entre los elementos teniendo de link principal un padre o hijo</p>
+
+        <p class="sectionExample"> parentlink = linkElement.parentElement.parentElement;</p>
+
+        <p class="sectionExample"> console.log(linkElement.parentElement.nextElementSibling.nextElementSibling);</p>
+
+    </section>
+    <section class="sections">
+        <h2 class="sectionTitle">createElement</h2>
+
+        <p class="sectionText">A partir del Javascript se pueden crear partes del html, que pueden activarse con interaccion del usuario. Para esto, tendriamos que crear lo que queremos agregar. Lo creado para introducirse al HTML depende de un elemento ya presente.</p>
+
+        <p class="sectionExample"> const divElement = document.createElement('div');
+            divElement.textContent = 'Soy un elemento creado por javascript';
+
+        </p>
+
+        <p class="sectionExample"> container.appendChild(divElement);</p>
+
+    </section>
+
+    <section class="sections">
+
+        <h2 class="sectionTitle">innerHTML</h2>
+
+        <p class="sectionText">Similar al uso de TextContent que permite modificar el texto de un elemento, el innerHTML agrega la funcionalidad de crear elementos dentro del elemento ya existente, de esta forma logrando hacer más maquetación</p>
+
+
+        <p class="sectionExample"> divElement.innerHTML = '<"p>Hola como estan<"/p>' </p>
+
+        <button id="toappend" class="btn" onclick="myfunction()">Click</button>
+    </section>
+
+
+</main>
+    
+    <script src="./app.js"></script>
+</body>
+
+
+</html>

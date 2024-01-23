@@ -1,0 +1,70 @@
+ul, li , a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+body{
+    background-color: steelblue;
+    color: white;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header{
+    text-align: center;
+    background-color: gray;
+    padding: 30px;
+}
+
+header h1{
+    text-transform: uppercase;
+    color:black;
+    font-size: 45px;
+
+}
+
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.NavBar li{
+    border-right: 1px solid black;
+}
+
+
+.NavBar li:last-child{
+    border-right: 1px solid gray;
+}
+
+a{
+    color: antiquewhite;
+    padding-right: 15px;
+}
+
+.sections{
+    background-color:rgba(218, 204, 183, 0.608);
+    color: black;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.sections h2{
+    text-transform: uppercase;
+}
+
+.sectionExample{
+    font-style: italic;
+    text-indent: 35px;
+    font-weight: 700;
+}
+
+.btn{
+    width: 120px;
+    height: 50px;
+    background-color: steelblue;
+
+}
